@@ -1,0 +1,17 @@
+{
+  "name": "creonit/markup-bundle",
+  "keywords": [
+    "creonit",
+    "symfony",
+    "markup"
+  ],
+  "license": "GPL-3.0-only",
+  "autoload": {
+    "psr-4": {
+      "Creonit\\RestBundle\\": ""
+    }
+  },
+  "require": {
+    "symfony/symfony": "~5.0"
+  }
+}
