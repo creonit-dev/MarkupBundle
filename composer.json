@@ -12,6 +12,6 @@
     }
   },
   "require": {
-    "symfony/symfony": "~5.0"
+    "symfony/framework-bundle": "~5.0"
   }
 }
