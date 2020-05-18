@@ -5,12 +5,13 @@ namespace Creonit\MarkupBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Twig\Environment;
 
 class TemplateController extends AbstractController
 {
-    public function renderAction(Request $request)
+    public function renderAction(Request $request, Environment $twig)
     {
-        $template = $this->container->get('twig')->load($request->attributes->get('template', 'static.twig'));
+        $template = $twig->load($request->attributes->get('template', 'static.page.twig'));
         $response = new Response();
 
         if ($request->headers->has('X-Fragment')) {
@@ -28,5 +29,4 @@ class TemplateController extends AbstractController
 
         return $response->setContent($content);
     }
-
 }

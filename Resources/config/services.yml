@@ -31,3 +31,8 @@ services:
         class: Creonit\MarkupBundle\Normalizer\UserNormalizer
         tags: [{name: serializer.normalizer}]
         public: false
+
+    Creonit\MarkupBundle\Controller\TemplateController:
+        autowire: true
+        autoconfigure: true
+        tags: ['controller.service_arguments']
